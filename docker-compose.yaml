@@ -1,0 +1,31 @@
+volumes:
+  character-sheet:
+    external: true
+
+services:
+  fastapi:
+    environment:
+      CORS_HOST: http://localhost:3000
+      DATABASE_URL: postgresql://character:sheet@postgres/character-sheet
+      # SIGNING_KEY: dh2389dh2398dh-392edh2389dh2389dh2398dh238d9h9238
+      WAIT_HOSTS: postgres:5432
+      WAIT_BEFORE: 5
+      WAIT_TIMEOUT: 60
+      PORT: 8000
+    build:
+      context: api
+      dockerfile: Dockerfile.dev
+    ports:
+      - 8000:8000
+    volumes:
+      - ./api:/app
+  postgres:
+    image: postgres:14.5-bullseye
+    volumes:
+      - character-sheet:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: sheet
+      POSTGRES_USER: character
+      POSTGRES_DB: character-sheet
+    ports:
+      - "15432:5432"
