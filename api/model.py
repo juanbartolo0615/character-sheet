@@ -8,5 +8,5 @@ class User(Base):
     __tablename__ = "users"
 
     id: Mapped[int] = mapped_column(primary_key=True, init=False)
-    email = Mapped[str]
-    hashed_password = Mapped[str]
+    email: Mapped[str]
+    hashed_password: Mapped[str]
