@@ -1,5 +1,5 @@
 from sqlalchemy.orm import relationship, DeclarativeBase, MappedAsDataclass, Mapped, mapped_column
-from sqlalchemy import String
+from sqlalchemy import String, ForeignKey
 
 class Base(MappedAsDataclass, DeclarativeBase):
     pass
@@ -18,4 +18,12 @@ class Races(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True, init=False)
     name: Mapped[str]
+    description: Mapped[str]
+
+class RacialTraits(Base):
+    __tablename__ = "racialTraits"
+
+    id: Mapped[int] = mapped_column(primary_key=True, init=False)
+    race_id: Mapped[int] = mapped_column(ForeignKey("races.id"))
+    trait: Mapped[str]
     description: Mapped[str]

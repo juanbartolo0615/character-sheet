@@ -1,0 +1,102 @@
+{
+  "racialTraits": [
+    {
+      "name": "Dwarf",
+      "traits": {
+        "Size": "Medium",
+        "Speed": "25",
+        "Darkvision": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.",
+        "Dwarven Resilience": "You have advantage on saving throws against poison, and you have resistance against poison damage.",
+        "Dwarven Combat Training": "You have proficiency with the battleaxe, handaxe, throwing hammer, and warhammer.",
+        "Tool Proficiency": "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools.",
+        "Stonecunning": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check.",
+        "Languages": "Common and Dwarvish"
+      }
+    },
+    {
+      "name": "Elf",
+      "traits": {
+        "Size": "Medium",
+        "Speed": "30",
+        "Darkvision": "You can see in dim light within 60 feet of you as if it were bright light.",
+        "Keen Senses": "You have proficiency in the Perception skill.",
+        "Fey Ancestry": "You have advantage on saving throws against being charmed, and magic can’t put you to sleep.",
+        "Trance": "Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day.",
+        "Languages": "Common and Elvish"
+      }
+    },
+    {
+      "name": "Halfling",
+      "traits": {
+        "Size": "Small",
+        "Speed": "25",
+        "Lucky": "When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.",
+        "Brave": "You have advantage on saving throws against being frightened.",
+        "Halfling Nimbleness": "You can move through the space of any creature that is of a size larger than yours.",
+        "Languages": "Common and Halfling"
+      }
+    },
+    {
+      "name": "Human",
+      "traits": {
+        "Size": "Medium",
+        "Speed": "30",
+        "Languages": "Common and one extra language of your choice"
+      }
+    },
+    {
+      "name": "Dragonborn",
+      "traits": {
+        "Size": "Medium",
+        "Speed": "30",
+        "Draconic Ancestry": "You have resistance to the damage type associated with your draconic ancestry (acid, cold, fire, lightning, or poison).",
+        "Breath Weapon": "You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.",
+        "Languages": "Common and Draconic"
+      }
+    },
+    {
+      "name": "Gnome",
+      "traits": {
+        "Size": "Small",
+        "Speed": "25",
+        "Darkvision": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.",
+        "Gnome Cunning": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.",
+        "Languages": "Common and Gnomish"
+      }
+    },
+    {
+      "name": "Half-Elf",
+      "traits": {
+        "Size": "Medium",
+        "Speed": "30",
+        "Darkvision": "You can see in dim light within 60 feet of you as if it were bright light.",
+        "Fey Ancestry": "You have advantage on saving throws against being charmed, and magic can’t put you to sleep.",
+        "Skill Versatility": "You gain proficiency in two skills of your choice.",
+        "Languages": "Common, Elvish, and one extra language of your choice"
+      }
+    },
+    {
+      "name": "Half-Orc",
+      "traits": {
+        "Size": "Medium",
+        "Speed": "30",
+        "Darkvision": "You can see in dim light within 60 feet of you as if it were bright light.",
+        "Menacing": "You gain proficiency in the Intimidation skill.",
+        "Relentless Endurance": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a long rest.",
+        "Savage Attacks": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon’s damage dice one additional time and add it to the extra damage of the critical hit.",
+        "Languages": "Common and Orc"
+      }
+    },
+    {
+      "name": "Tiefling",
+      "traits": {
+        "Size": "Medium",
+        "Speed": "30",
+        "Darkvision": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.",
+        "Hellish Resistance": "You have resistance to fire damage.",
+        "Infernal Legacy": "You know the thaumaturgy cantrip. Once you reach 3rd level, you can cast the hellish rebuke spell once per day as a 2nd-level spell. Once you reach 5th level, you can also cast the darkness spell once per day. Charisma is your spellcasting ability for these spells.",
+        "Languages": "Common and Infernal"
+      }
+    }
+  ]
+}
