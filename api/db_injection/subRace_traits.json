@@ -1,0 +1,58 @@
+{
+  "subrace_traits": [
+    {
+      "race": "Dwarf",
+      "subrace": "Hill Dwarf",
+      "traits": {
+        "Dwarven Toughness": "Maximum hit points increase by 1, and increases by 1 every time you gain a level."
+      }
+    },
+    {
+      "race": "Dwarf",
+      "subrace": "Mountain Dwarf",
+      "traits": {
+        "Dwarven Armor Training": "Proficiency with light and medium armor."
+      }
+    },
+    {
+      "race": "Elf",
+      "subrace": "High Elf",
+      "traits": {
+        "Elf Weapon Training": "Proficiency with longswords, shortswords, shortbows, and longbows.",
+        "Cantrip": "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it."
+      }
+    },
+    {
+      "race": "Elf",
+      "subrace": "Wood Elf",
+      "traits": {
+        "Elf Weapon Training": "Proficiency with longswords, shortswords, shortbows, and longbows.",
+        "Fleet of Foot": "Base walking speed increases to 35 feet."
+      }
+    },
+    {
+      "race": "Elf",
+      "subrace": "Dark Elf (Drow)",
+      "traits": {
+        "Superior Darkvision": "Can see in dim light within 120 feet as if it were bright light, and in darkness as if it were dim light.",
+        "Sunlight Sensitivity": "Disadvantage on attack rolls and Wisdom (Perception) checks relying on sight when in direct sunlight."
+      }
+    },
+    {
+      "race": "Gnome",
+      "subrace": "Forest Gnome",
+      "traits": {
+        "Natural Illusionist": "Know the minor illusion cantrip.",
+        "Speak with Small Beasts": "Can communicate simple ideas with Small or smaller beasts."
+      }
+    },
+    {
+      "race": "Gnome",
+      "subrace": "Rock Gnome",
+      "traits": {
+        "Artificer’s Lore": "Double proficiency bonus on checks involving alchemist’s supplies or tinker’s tools.",
+        "Tinker": "Can create tiny clockwork devices."
+      }
+    }
+  ]
+}

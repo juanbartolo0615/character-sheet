@@ -1,0 +1,32 @@
+{
+  "subraces": [
+    {
+      "race": "Dwarf",
+      "subrace": "Hill Dwarf"
+    },
+    {
+      "race": "Dwarf",
+      "subrace": "Mountain Dwarf"
+    },
+    {
+      "race": "Elf",
+      "subrace": "High Elf"
+    },
+    {
+      "race": "Elf",
+      "subrace": "Wood Elf"
+    },
+    {
+      "race": "Elf",
+      "subrace": "Dark Elf (Drow)"
+    },
+    {
+      "race": "Gnome",
+      "subrace": "Forest Gnome"
+    },
+    {
+      "race": "Gnome",
+      "subrace": "Rock Gnome"
+    }
+  ]
+}

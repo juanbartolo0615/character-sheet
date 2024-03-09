@@ -27,3 +27,18 @@ class RacialTraits(Base):
     race_id: Mapped[int] = mapped_column(ForeignKey("races.id"))
     trait: Mapped[str]
     description: Mapped[str]
+
+class Subraces(Base):
+    __tablename__ = "subraces"
+
+    id: Mapped[int] = mapped_column(primary_key=True, init=False)
+    race_id: Mapped[int] = mapped_column(ForeignKey("races.id"))
+    name: Mapped[str]
+
+class SubracesTraits(Base):
+    __tablename__ = "subracesTraits"
+
+    id: Mapped[int] = mapped_column(primary_key=True, init=False)
+    subrace_id: Mapped[int] = mapped_column(ForeignKey("subraces.id"))
+    trait: Mapped[str]
+    description: Mapped[str]

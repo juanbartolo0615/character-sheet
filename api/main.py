@@ -4,7 +4,7 @@ import json
 from contextlib import asynccontextmanager
 from database import SessionLocal
 from sqlalchemy import select
-from model import Races, RacialTraits
+from model import Races, RacialTraits, Subraces, SubracesTraits
 
 
 @asynccontextmanager
@@ -38,6 +38,38 @@ async def lifespan(app: FastAPI):
                     conn.add(create_racial_trait_request)
             f.close()
             conn.commit()
+
+        subraces = conn.execute(select(Subraces)).first()
+        if not subraces:
+            f = open("db_injection/subRaces.json")
+            data = json.load(f)
+            for subrace in data["subraces"]:
+                race_id = conn.execute(select(Races.id).where(Races.name == subrace["race"])).scalar_one()
+                create_subrace_request= Subraces(
+                    race_id=race_id,
+                    name=subrace["subrace"]
+                )
+                conn.add(create_subrace_request)
+            f.close()
+            conn.commit()
+
+        subraces_traits = conn.execute(select(SubracesTraits)).first()
+        if not subraces_traits:
+            f = open("db_injection/subRace_traits.json")
+            data = json.load(f)
+            for subrace in data["subrace_traits"]:
+                subrace_id = conn.execute(select(Subraces.id).where(Subraces.name == subrace["subrace"])).scalar_one()
+                for trait in subrace["traits"]:
+                    create_subrace_traits = SubracesTraits(
+                        subrace_id=subrace_id,
+                        trait=trait,
+                        description=subrace["traits"][trait]
+                    )
+                    conn.add(create_subrace_traits)
+                f.close()
+                conn.commit()
+
+
     yield
     print("Restarting")
 
