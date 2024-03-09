@@ -11,3 +11,11 @@ class User(Base):
     id: Mapped[int] = mapped_column(primary_key=True, init=False)
     username: Mapped[str] = mapped_column(String(20))
     hashed_password: Mapped[str]
+
+
+class Races(Base):
+    __tablename__ = "races"
+
+    id: Mapped[int] = mapped_column(primary_key=True, init=False)
+    name: Mapped[str]
+    description: Mapped[str]
