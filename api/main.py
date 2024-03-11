@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import auth
+from routers import auth, races
 import json
 from contextlib import asynccontextmanager
 from database import SessionLocal
@@ -69,7 +69,6 @@ async def lifespan(app: FastAPI):
                 f.close()
                 conn.commit()
 
-
     yield
     print("Restarting")
 
@@ -77,6 +76,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 
 app.include_router(auth.router)
+app.include_router(races.router)
 
 @app.get("/")
 def read_root():
