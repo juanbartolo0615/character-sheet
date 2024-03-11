@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from typing import List
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException, status
 from database import SessionLocal
 from sqlalchemy import select
 from model import Races, Subraces, RacialTraits, SubracesTraits
@@ -75,33 +75,40 @@ def get_subraces(race_id: int):
 
 @router.get("/", response_model=List[RaceOut])
 def get_all_races():
-    with SessionLocal() as conn:
-        races = conn.execute(select(Races))
-        result = []
-        for race in races.scalars():
-            racial_traits = get_racial_traits(race.id)
-            subraces_result = get_subraces(race.id)
+    try:
+        with SessionLocal() as conn:
+            races = conn.execute(select(Races))
+            result = []
+            for race in races.scalars():
+                racial_traits = get_racial_traits(race.id)
+                subraces_result = get_subraces(race.id)
 
-            result.append(RaceOut(
-                id=race.id,
-                name=race.name,
-                description=race.description,
-                traits=racial_traits,
-                subraces=subraces_result
-            ))
-    return result
+                result.append(RaceOut(
+                    id=race.id,
+                    name=race.name,
+                    description=race.description,
+                    traits=racial_traits,
+                    subraces=subraces_result
+                ))
+        return result
+    except Exception:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Could not retrieve races")
 
-@router.get("/{race_id}")
+
+@router.get("/{race_id}", response_model=RaceOut)
 def get_one_race(race_id: int):
-    with SessionLocal() as conn:
-        race = conn.execute(select(Races).where(Races.id == race_id)).scalar_one()
-        racial_traits = get_racial_traits(race_id)
-        subraces_result = get_subraces(race_id)
+    try:
+        with SessionLocal() as conn:
+            race = conn.execute(select(Races).where(Races.id == race_id)).scalar_one()
+            racial_traits = get_racial_traits(race_id)
+            subraces_result = get_subraces(race_id)
 
-        return RaceOut(
-                id=race.id,
-                name=race.name,
-                description=race.description,
-                traits=racial_traits,
-                subraces=subraces_result
-            )
+            return RaceOut(
+                    id=race.id,
+                    name=race.name,
+                    description=race.description,
+                    traits=racial_traits,
+                    subraces=subraces_result
+                )
+    except Exception:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Could not retrieve race")
