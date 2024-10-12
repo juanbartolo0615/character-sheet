@@ -1,0 +1,95 @@
+{
+  "features": [
+    {
+      "class": "Monk",
+      "subclass": "Way of the Open Hand",
+      "feature": "Open Hand Technique",
+      "description": "When you hit a creature with one of the attacks granted by your Flurry of Blows, you can impose one of the following effects on the target: (1) Knock Prone: The target must succeed on a Dexterity saving throw or be knocked prone, giving melee attackers advantage on subsequent attacks. (2) Push: The target must make a Strength saving throw or be pushed up to 15 feet away from you, allowing you to control the battlefield and reposition enemies. (3) Prevent Reactions: The target can’t take reactions until the end of your next turn, preventing them from making opportunity attacks or using reaction-based abilities.",
+      "level": 3
+    },
+    {
+      "class": "Monk",
+      "subclass": "Way of the Open Hand",
+      "feature": "Wholeness of Body",
+      "description": "As an action, you can regain hit points equal to three times your monk level. This feature can be used once per long rest. It represents your control over your body’s energy, allowing you to heal yourself without needing external magic or potions.",
+      "level": 6
+    },
+    {
+      "class": "Monk",
+      "subclass": "Way of the Open Hand",
+      "feature": "Tranquility",
+      "description": "You gain the effect of the sanctuary spell when you finish a long rest. The effect lasts until the start of your next long rest or until you attack or cast a spell. Sanctuary forces any creature trying to attack you to first make a Wisdom saving throw. On a failure, they must choose a new target or lose their attack. This ability allows you to avoid being targeted while meditating or avoiding combat.",
+      "level": 11
+    },
+    {
+      "class": "Monk",
+      "subclass": "Way of the Open Hand",
+      "feature": "Quivering Palm",
+      "description": "When you hit a creature with an unarmed strike, you can spend 3 ki points to set up deadly vibrations in its body. These vibrations last for a number of days equal to your monk level (up to 17 days). At any point within that time, you can use an action to trigger these vibrations. The target must make a Constitution saving throw. On a failed save, the target is reduced to 0 hit points, effectively killing or incapacitating it. On a successful save, the target still takes 10d10 necrotic damage. This ability allows you to set up an assassination or deliver a delayed lethal blow even in long-term engagements.",
+      "level": 17
+    },
+    {
+      "class": "Monk",
+      "subclass": "Way of Shadow",
+      "feature": "Shadow Arts",
+      "description": "You gain the ability to channel your ki to cast certain spells. As an action, you can spend 2 ki points to cast one of the following spells without providing material components: darkness, darkvision, pass without trace, or silence. Additionally, you learn the minor illusion cantrip if you don't already know it. These abilities grant you powerful tools for stealth, mobility, and ambush tactics, making you adept at infiltrating and striking from the shadows.",
+      "level": 3
+    },
+    {
+      "class": "Monk",
+      "subclass": "Way of Shadow",
+      "feature": "Shadow Step",
+      "description": "At 6th level, when you are in dim light or darkness, you can use a bonus action to teleport up to 60 feet to an unoccupied space you can see that is also in dim light or darkness. After you teleport, you have advantage on the first melee attack you make before the end of your turn. This feature allows you to move quickly and unpredictably in areas of low light, setting up devastating surprise attacks and tactical repositioning.",
+      "level": 6
+    },
+    {
+      "class": "Monk",
+      "subclass": "Way of Shadow",
+      "feature": "Cloak of Shadows",
+      "description": "Starting at 11th level, you can become invisible when you are in an area of dim light or darkness. As an action, you can vanish from sight, remaining invisible until you attack, cast a spell, or enter an area of bright light. This ability allows you to blend perfectly into the shadows, evading enemies or setting up powerful ambushes. You can use this to scout ahead or escape danger without being seen.",
+      "level": 11
+    },
+    {
+      "class": "Monk",
+      "subclass": "Way of Shadow",
+      "feature": "Opportunist",
+      "description": "At 17th level, you can exploit the weaknesses of your enemies in combat. Whenever a creature within 5 feet of you is hit by an attack made by another creature, you can use your reaction to make a melee weapon attack against that creature. This feature allows you to quickly capitalize on openings in the enemy's defenses, delivering additional strikes when they are vulnerable. It's especially useful in crowded melees where enemies are being attacked from multiple angles.",
+      "level": 17
+    },
+    {
+      "class": "Monk",
+      "subclass": "Way of the Four Elements",
+      "feature": "Elemental Attunement",
+      "description": "At 3rd level, you can use your action to control elemental forces around you, creating minor elemental effects. You can produce harmless sensory effects related to air, earth, fire, or water, such as a shower of sparks, a puff of wind, a small spray of water, or the sound of crackling flames. Additionally, you can light or extinguish a candle, torch, or small campfire, chill or warm a nonliving object no larger than 1 cubic foot for up to 1 hour, or cause elemental materials to shape themselves into crude forms for 1 minute. This ability is thematic and allows you to manipulate the environment subtly.",
+      "level": 3
+    },
+    {
+      "class": "Monk",
+      "subclass": "Way of the Four Elements",
+      "feature": "Elemental Disciplines",
+      "description": "At 3rd level, you gain the ability to use your ki to perform powerful elemental effects, known as Elemental Disciplines. You learn one discipline at 3rd level and can learn more at higher levels. Each discipline costs ki points to activate and represents the four classical elements: air, earth, fire, and water.",
+      "level": 3
+    },
+    {
+      "class": "Monk",
+      "subclass": "Way of the Four Elements",
+      "feature": "Elemental Disciplines",
+      "description": "You gain another elemental disciple",
+      "level": 6
+    },
+    {
+      "class": "Monk",
+      "subclass": "Way of the Four Elements",
+      "feature": "Elemental Disciplines",
+      "description": "You gain another elemental disciple",
+      "level": 11
+    },
+    {
+      "class": "Monk",
+      "subclass": "Way of the Four Elements",
+      "feature": "Elemental Disciplines",
+      "description": "You gain another elemental disciple",
+      "level": 17
+    }
+  ]
+}

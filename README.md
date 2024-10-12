@@ -2,10 +2,6 @@
 
 This project is going to be a DND character sheet based of the player's handbook. It will be essential to build your character along with the player's hanboook.
 
-Open up Docker Desktop
-
-Will need to create a docker volume called character-sheet
-
 ## Requirements
 
 The only thing you will need to run this code is Docker Desktop installed. If you don't have it installed go to the official [Docker website](https://docs.docker.com/desktop/) and follow the instructions.
@@ -24,7 +20,7 @@ This will create the docker images from the docker-compose.yaml file to allow yo
 
 > docker compose up -d
 
-This will finally get your docker containers up and running with the FastAPI and the React server. Looking at your docker docker desktop in the containers section you will see three containers up and running. Check out the logs and wait for the servers to get up and running. You can checkout the front end at [here](http://localhost:3000/) and the FastAPI docs [here](http://localhost:8000/docs#/). Depending if your on windows the front end server might take a little bit longer to get up and running the first time around.
+This will finally get your docker containers up and running with the FastAPI and the React server. Looking at your docker docker desktop in the containers section you will see three containers up and running. Check out the logs and wait for the servers to get up and running. You can checkout the front end at [localhost:3000](http://localhost:3000/) and the FastAPI docs at [localhost:8000/docs#](http://localhost:8000/docs#/). Depending if your on windows the front end server might take a little bit longer to get up and running the first time around.
 
 ## Alembic Commands
 

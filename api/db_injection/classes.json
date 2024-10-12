@@ -1,0 +1,52 @@
+{
+  "classes": [
+    {
+      "class": "Barbarian",
+      "description": "A fierce warrior of primal origins, fueled by rage and unmatched in melee combat."
+    },
+    {
+      "class": "Bard",
+      "description": "A versatile spellcaster and performer who uses music and magic to inspire and enchant."
+    },
+    {
+      "class": "Cleric",
+      "description": "A divine spellcaster who serves a deity, capable of healing and wielding powerful spells."
+    },
+    {
+      "class": "Druid",
+      "description": "A spellcaster connected to nature, capable of shapeshifting and summoning natural elements."
+    },
+    {
+      "class": "Fighter",
+      "description": "A master of weapons and combat tactics, adaptable to various fighting styles."
+    },
+    {
+      "class": "Monk",
+      "description": "A martial artist who channels Ki for special abilities and excels in unarmed combat."
+    },
+    {
+      "class": "Paladin",
+      "description": "A holy warrior sworn to uphold justice and righteousness, combining martial prowess with divine magic."
+    },
+    {
+      "class": "Ranger",
+      "description": "A skilled tracker and hunter, often accompanied by an animal companion, specializing in ranged attacks and nature magic."
+    },
+    {
+      "class": "Rogue",
+      "description": "A cunning and stealthy character, proficient in skills like deception and thievery, often dealing high damage with sneak attacks."
+    },
+    {
+      "class": "Sorcerer",
+      "description": "A spellcaster who wields innate magical power, often tied to a magical bloodline."
+    },
+    {
+      "class": "Warlock",
+      "description": "A spellcaster who makes a pact with a powerful entity for spells and abilities, drawing on eldritch magic."
+    },
+    {
+      "class": "Wizard",
+      "description": "A scholarly spellcaster who studies arcane magic, capable of casting a wide variety of spells."
+    }
+  ]
+}

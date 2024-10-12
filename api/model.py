@@ -42,3 +42,47 @@ class SubracesTraits(Base):
     subrace_id: Mapped[int] = mapped_column(ForeignKey("subraces.id"))
     trait: Mapped[str]
     description: Mapped[str]
+
+class Classes(Base):
+    __tablename__ = "classes"
+
+    id: Mapped[int] = mapped_column(primary_key=True, init=False)
+    name: Mapped[str]
+    description: Mapped[str]
+
+class Subclass(Base):
+    __tablename__ = "subclass"
+
+    id: Mapped[int] = mapped_column(primary_key=True, init=False)
+    class_id: Mapped[int] = mapped_column(ForeignKey("classes.id"))
+    subclass_name: Mapped[str]
+    description: Mapped[str]
+
+class ClassFeature(Base):
+    __tablename__ = "feature"
+
+    id: Mapped[int] = mapped_column(primary_key=True, init=False)
+    class_id: Mapped[int] = mapped_column(ForeignKey("classes.id"))
+    level: Mapped[int]
+    feature: Mapped[str]
+    description: Mapped[str]
+
+class SubclassFeature(Base):
+    __tablename__ = "subclassFeature"
+
+    id: Mapped[int] = mapped_column(primary_key=True, init=False)
+    class_id: Mapped[int] = mapped_column(ForeignKey("classes.id"))
+    subclass_id: Mapped[int] = mapped_column(ForeignKey("subclass.id"))
+    level: Mapped[int]
+    feature: Mapped[str]
+    description: Mapped[str]
+
+class Character(Base):
+    __tablename__ = "characters"
+
+    id: Mapped[int] = mapped_column(primary_key=True, init=False)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"))
+    race_id: Mapped[int] = mapped_column(ForeignKey("races.id"))
+    subrace_id: Mapped[int] = mapped_column(ForeignKey("subraces.id"), nullable=True)
+    level: Mapped[int]
+    name: Mapped[str]

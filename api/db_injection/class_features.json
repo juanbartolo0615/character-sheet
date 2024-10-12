@@ -1,0 +1,160 @@
+{
+  "features": [
+    {
+      "class": "Monk",
+      "level": 1,
+      "feature": "Unarmored Defense",
+      "description": "When not wearing armor, your AC equals 10 + your Dexterity modifier + your Wisdom modifier."
+    },
+    {
+      "class": "Monk",
+      "level": 1,
+      "feature": "Martial Arts",
+      "description": "You can use Dexterity instead of Strength for unarmed strikes and monk weapons, and you can make an unarmed strike as a bonus action after attacking with a monk weapon."
+    },
+    {
+      "class": "Monk",
+      "level": 2,
+      "feature": "Ki",
+      "description": "You gain a pool of Ki points equal to 1 per monk level"
+    },
+    {
+      "class": "Monk",
+      "level": 2,
+      "feature": "Flurry of Blows",
+      "description": "After you take the Attack action on your turn, you can spend 1 Ki point to make two unarmed strikes as a bonus action."
+    },
+    {
+      "class": "Monk",
+      "level": 2,
+      "feature": "Patient Defense",
+      "description": "You can spend 1 Ki point to take the Dodge action as a bonus action on your turn."
+    },
+    {
+      "class": "Monk",
+      "level": 2,
+      "feature": "Step of the Wind",
+      "description": "You can spend 1 Ki point to take the Disengage or Dash action as a bonus action on your turn, and your jump distance is doubled for the turn."
+    },
+    {
+      "class": "Monk",
+      "level": 2,
+      "feature": "Unarmored Movement",
+      "description": "Your speed increases by 10 feet while you are not wearing armor or wielding a shield."
+    },
+    {
+      "class": "Monk",
+      "level": 3,
+      "feature": "Monastic Tradition",
+      "description": "Choose a monastic tradition (Way of the Open Hand, Way of the Shadow, or Way of the Four Elements) that grants you additional features."
+    },
+    {
+      "class": "Monk",
+      "level": 4,
+      "feature": "Ability Score Improvement",
+      "description": "Increase one ability score by 2 or two ability scores by 1. Or choose a feature."
+    },
+    {
+      "class": "Monk",
+      "level": 5,
+      "feature": "Extra Attack",
+      "description": "You can attack twice, instead of once, whenever you take the Attack action on your turn."
+    },
+    {
+      "class": "Monk",
+      "level": 5,
+      "feature": "Stunning Strike",
+      "description": "You can spend 1 Ki point to attempt to stun a creature you hit with a melee weapon attack."
+    },
+    {
+      "class": "Monk",
+      "level": 6,
+      "feature": "Ki-Empowered Strikes",
+      "description": "Your unarmed strikes count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
+    },
+    {
+      "class": "Monk",
+      "level": 7,
+      "feature": "Stillness of Mind",
+      "description": "You can use your action to end one effect on yourself that is causing you to be charmed or frightened."
+    },
+    {
+      "class": "Monk",
+      "level": 8,
+      "feature": "Ability Score Improvement",
+      "description": "Increase one ability score by 2 or two ability scores by 1. Or choose a feature."
+    },
+    {
+      "class": "Monk",
+      "level": 9,
+      "feature": "Unarmored Movement Improvement",
+      "description": "Your speed increases by an additional 10 feet."
+    },
+    {
+      "class": "Monk",
+      "level": 10,
+      "feature": "Monastic Tradition Feature",
+      "description": "Gain a feature based on your chosen monastic tradition."
+    },
+    {
+      "class": "Monk",
+      "level": 11,
+      "feature": "Extra Attack Improvement",
+      "description": "You can now attack three times instead of twice whenever you take the Attack action."
+    },
+    {
+      "class": "Monk",
+      "level": 12,
+      "feature": "Ability Score Improvement",
+      "description": "Increase one ability score by 2 or two ability scores by 1. Or choose a feature."
+    },
+    {
+      "class": "Monk",
+      "level": 13,
+      "feature": "Monastic Tradition Feature",
+      "description": "Gain another feature based on your chosen monastic tradition."
+    },
+    {
+      "class": "Monk",
+      "level": 14,
+      "feature": "Diamond Soul",
+      "description": "You gain proficiency in all saving throws, and when you make a saving throw, you can spend 1 Ki point to reroll it."
+    },
+    {
+      "class": "Monk",
+      "level": 15,
+      "feature": "Monastic Tradition Feature",
+      "description": "Gain another feature based on your chosen monastic tradition."
+    },
+    {
+      "class": "Monk",
+      "level": 16,
+      "feature": "Ability Score Improvement",
+      "description": "Increase one ability score by 2 or two ability scores by 1. Or choose a feature."
+    },
+    {
+      "class": "Monk",
+      "level": 17,
+      "feature": "Timeless Body",
+      "description": "You no longer age, and you can spend 1 Ki point to regain hit points."
+    },
+    {
+      "class": "Monk",
+      "level": 18,
+      "feature": "Empty Body",
+      "description": "You can use 4 Ki points to become invisible and gain resistance to all damage except force damage."
+    },
+    {
+      "class": "Monk",
+      "level": 19,
+      "feature": "Ability Score Improvement",
+      "description": "Increase one ability score by 2 or two ability scores by 1. Or choose a feature."
+    },
+    {
+      "class": "Monk",
+      "level": 20,
+      "feature": "Perfect Self",
+      "description": "When you roll for initiative and have no Ki points remaining, you regain 4 Ki points."
+    }
+  ]
+}

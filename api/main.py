@@ -1,10 +1,10 @@
 from fastapi import FastAPI
-from routers import auth, races
+from routers import auth, races, character, classes
 import json
 from contextlib import asynccontextmanager
 from database import SessionLocal
 from sqlalchemy import select
-from model import Races, RacialTraits, Subraces, SubracesTraits
+from model import Races, RacialTraits, Subraces, SubracesTraits, Classes, Subclass, ClassFeature, SubclassFeature
 
 
 @asynccontextmanager
@@ -69,14 +69,79 @@ async def lifespan(app: FastAPI):
                 f.close()
                 conn.commit()
 
+        classes = conn.execute(select(Classes)).first()
+        if not classes:
+            f = open("db_injection/classes.json")
+            data = json.load(f)
+            for classs in data["classes"]:
+                create_class_request = Classes(
+                    name=classs["class"],
+                    description=classs["description"]
+                )
+                conn.add(create_class_request)
+            f.close()
+            conn.commit()
+
+        subclass = conn.execute(select(Subclass)).first()
+        if not subclass:
+            f = open("db_injection/subclass.json")
+            data = json.load(f)
+            for subclass in data["subclass"]:
+                class_id = conn.execute(select(Classes.id).where(Classes.name == subclass["class"])).scalar_one()
+                create_subclass_request = Subclass(
+                    class_id=class_id,
+                    subclass_name=subclass["subclass"],
+                    description=subclass["description"]
+                )
+                conn.add(create_subclass_request)
+            f.close()
+            conn.commit()
+
+        feature = conn.execute(select(ClassFeature)).first()
+        if not feature:
+            f = open("db_injection/class_features.json")
+            data = json.load(f)
+            for feature in data["features"]:
+                class_id = conn.execute(select(Classes.id).where(Classes.name == feature["class"])).scalar_one()
+                create_feature_request = ClassFeature(
+                    class_id=class_id,
+                    level=feature["level"],
+                    feature=feature["feature"],
+                    description=feature["description"]
+                )
+                conn.add(create_feature_request)
+            f.close()
+            conn.commit()
+
+        subclass_feature = conn.execute(select(SubclassFeature)).first()
+        if not subclass_feature:
+            f = open("db_injection/subclass_features.json")
+            data = json.load(f)
+            for feature in data["features"]:
+                class_id = conn.execute(select(Classes.id).where(Classes.name == feature["class"])).scalar_one()
+                subclass_id = conn.execute(select(Subclass.id).where(Subclass.subclass_name == feature["subclass"])).scalar_one()
+                create_subclass_feature_request = SubclassFeature(
+                    class_id=class_id,
+                    subclass_id=subclass_id,
+                    level=feature["level"],
+                    feature=feature["feature"],
+                    description=feature["description"]
+                )
+                conn.add(create_subclass_feature_request)
+            f.close()
+            conn.commit()
+
     yield
     print("Restarting")
 
 
 app = FastAPI(lifespan=lifespan)
 
+
 app.include_router(auth.router)
 app.include_router(races.router)
+app.include_router(character.router)
+app.include_router(classes.router)
 
 @app.get("/")
 def read_root():

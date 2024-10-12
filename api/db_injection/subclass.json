@@ -1,0 +1,199 @@
+{
+  "subclass": [
+    {
+      "class": "Barbarian",
+      "subclass": "Path of the Berserker",
+      "description": "Focuses on relentless rage and the ability to go into a frenzied state, gaining extra attacks."
+    },
+    {
+      "class": "Barbarian",
+      "subclass": "Path of the Totem Warrior",
+      "description": "Gains spirit animal companions and unique abilities based on chosen totems, emphasizing versatility and survival."
+    },
+    {
+      "class": "Bard",
+      "subclass": "College of Lore",
+      "description": "Masters of storytelling and knowledge, gaining abilities that enhance spellcasting and provide skills."
+    },
+    {
+      "class": "Bard",
+      "subclass": "College of Valor",
+      "description": "Inspires bravery in allies, enhancing their combat capabilities and gaining additional combat prowess."
+    },
+    {
+      "class": "Cleric",
+      "subclass": "Domain of Life",
+      "description": "Emphasizes healing and preservation, enhancing healing spells and granting protective abilities."
+    },
+    {
+      "class": "Cleric",
+      "subclass": "Domain of Light",
+      "description": "Wielders of radiant energy, focusing on illumination and damage against foes, often with spells that inflict radiant damage."
+    },
+    {
+      "class": "Cleric",
+      "subclass": "Domain of Nature",
+      "description": "Connects deeply with nature, gaining spells and abilities to control plants and animals."
+    },
+    {
+      "class": "Cleric",
+      "subclass": "Domain of Tempest",
+      "description": "Harnesses the power of storms and thunder, focusing on damage dealing and control over weather."
+    },
+    {
+      "class": "Cleric",
+      "subclass": "Domain of Trickery",
+      "description": "Deceptive and clever, using illusions and cunning to outmaneuver opponents."
+    },
+    {
+      "class": "Cleric",
+      "subclass": "Domain of War",
+      "description": "Focuses on combat prowess, granting abilities to enhance martial abilities and leadership in battle."
+    },
+    {
+      "class": "Druid",
+      "subclass": "Circle of the Land",
+      "description": "Draws power from the land, gaining spells based on terrain types and abilities to regain spell slots."
+    },
+    {
+      "class": "Druid",
+      "subclass": "Circle of the Moon",
+      "description": "Masters of shapeshifting, enhancing Wild Shape abilities to transform into more powerful creatures."
+    },
+    {
+      "class": "Fighter",
+      "subclass": "Champion",
+      "description": "Focuses on raw physical prowess, gaining critical hit enhancements and improved combat abilities."
+    },
+    {
+      "class": "Fighter",
+      "subclass": "Battle Master",
+      "description": "Tactical fighters who use maneuvers to control the battlefield and enhance their attacks."
+    },
+    {
+      "class": "Fighter",
+      "subclass": "Eldritch Knight",
+      "description": "Combines martial prowess with arcane magic, gaining spellcasting abilities to complement their combat skills."
+    },
+    {
+      "class": "Monk",
+      "subclass": "Way of the Open Hand",
+      "description": "Masters of martial arts, focusing on unarmed strikes and techniques that manipulate opponents' movements."
+    },
+    {
+      "class": "Monk",
+      "subclass": "Way of Shadow",
+      "description": "Stealthy monks who utilize shadow magic to teleport and become unseen, emphasizing stealth and deception."
+    },
+    {
+      "class": "Monk",
+      "subclass": "Way of the Four Elements",
+      "description": "Monks who learn to harness elemental magic, allowing them to cast spells related to fire, water, earth, and air."
+    },
+    {
+      "class": "Paladin",
+      "subclass": "Oath of Devotion",
+      "description": "Holy warriors who embody the ideals of justice and righteousness, gaining abilities that enhance their combat and protective capabilities."
+    },
+    {
+      "class": "Paladin",
+      "subclass": "Oath of the Ancients",
+      "description": "Champions of nature and life, gaining abilities that protect allies and manipulate the battlefield."
+    },
+    {
+      "class": "Paladin",
+      "subclass": "Oath of Vengeance",
+      "description": "Seekers of retribution, focusing on punishing foes and gaining powers to pursue enemies relentlessly."
+    },
+    {
+      "class": "Ranger",
+      "subclass": "Hunter",
+      "description": "Skilled trackers and hunters who gain abilities to combat various foes and enhance their combat capabilities."
+    },
+    {
+      "class": "Ranger",
+      "subclass": "Beast Master",
+      "description": "Forms a bond with an animal companion, gaining abilities to fight alongside and coordinate with their beast."
+    },
+    {
+      "class": "Rogue",
+      "subclass": "Thief",
+      "description": "Masters of stealth and agility, gaining abilities to excel in thievery and mobility."
+    },
+    {
+      "class": "Rogue",
+      "subclass": "Assassin",
+      "description": "Experts in infiltration and silent takedowns, focusing on dealing high damage to unsuspecting targets."
+    },
+    {
+      "class": "Rogue",
+      "subclass": "Arcane Trickster",
+      "description": "Blends magic with stealth, using spells to enhance their roguish skills and create distractions."
+    },
+    {
+      "class": "Sorcerer",
+      "subclass": "Draconic Bloodline",
+      "description": "Sorcerers with draconic heritage, gaining powers related to their dragon ancestry, including elemental spells."
+    },
+    {
+      "class": "Sorcerer",
+      "subclass": "Wild Magic",
+      "description": "Channeling chaotic magical energy, these sorcerers can unleash unpredictable effects when they cast spells."
+    },
+    {
+      "class": "Warlock",
+      "subclass": "The Archfey",
+      "description": "Draws power from fey beings, gaining abilities that manipulate emotions and illusions."
+    },
+    {
+      "class": "Warlock",
+      "subclass": "The Fiend",
+      "description": "Forms a pact with a fiendish entity, focusing on fire spells and abilities that enhance damage."
+    },
+    {
+      "class": "Warlock",
+      "subclass": "The Great Old One",
+      "description": "Gains powers from eldritch entities, emphasizing mind control and telepathy."
+    },
+    {
+      "class": "Wizard",
+      "subclass": "School of Abjuration",
+      "description": "Masters of protective spells, gaining abilities to shield themselves and allies from harm."
+    },
+    {
+      "class": "Wizard",
+      "subclass": "School of Conjuration",
+      "description": "Specializes in summoning creatures and creating magical effects, enhancing versatility."
+    },
+    {
+      "class": "Wizard",
+      "subclass": "School of Divination",
+      "description": "Seers and fortune-tellers, gaining powers to foresee events and manipulate luck."
+    },
+    {
+      "class": "Wizard",
+      "subclass": "School of Enchantment",
+      "description": "Focuses on charm and control spells, influencing the minds of others."
+    },
+    {
+      "class": "Wizard",
+      "subclass": "School of Evocation",
+      "description": "Masters of elemental spells, dealing devastating damage through powerful evocation magic."
+    },
+    {
+      "class": "Wizard",
+      "subclass": "School of Illusion",
+      "description": "Experts in creating illusions and manipulating perception, gaining abilities to deceive and mislead."
+    },
+    {
+      "class": "Wizard",
+      "subclass": "School of Necromancy",
+      "description": "Focuses on death magic, gaining the ability to manipulate life and death."
+    },
+    {
+      "class": "Wizard",
+      "subclass": "School of Transmutation",
+      "description": "Masters of changing forms and substances, gaining abilities to alter the physical properties of objects and creatures."
+    }
+  ]
+}

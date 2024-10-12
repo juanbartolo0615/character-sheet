@@ -24,6 +24,10 @@ class Token(BaseModel):
     access_token: str
     token_type: str
 
+class UserInfo(BaseModel):
+    username: str
+    id: int
+
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
 
@@ -69,6 +73,7 @@ def create_access_token(username: str, user_id: int, expires_delta: timedelta):
     encode.update({"exp": expires})
     return jwt.encode(encode, SECRET_KEY, algorithm=ALGORITHM)
 
+@router.get("/verify", response_model=UserInfo)
 async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=ALGORITHM)
