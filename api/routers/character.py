@@ -11,12 +11,14 @@ class CharacterIn(BaseModel):
     race_id: int
     subrace_id: Optional[int] = None
     name: str
+    class_id: int
 
 class CharactersOut(BaseModel):
     id: int
     user_id: int
     race_id: int
     subrace_id: Optional[int] = None
+    class_id: int
     name: str
     level: int
 
@@ -32,6 +34,7 @@ def create_character(character: CharacterIn):
         user_id=character.user_id,
         race_id=character.race_id,
         subrace_id=character.subrace_id,
+        class_id=character.class_id,
         level=1,
         name=character.name
     )
@@ -39,7 +42,7 @@ def create_character(character: CharacterIn):
         conn.add(create_character_model)
         conn.commit()
 
-@router.get("/")
+@router.get("/{user_id}")
 def get_all_characters(user_id: int):
     try:
         with SessionLocal() as conn:
@@ -51,6 +54,7 @@ def get_all_characters(user_id: int):
                     user_id=character.user_id,
                     race_id=character.race_id,
                     subrace_id=character.subrace_id,
+                    class_id=character.class_id,
                     name=character.name,
                     level=character.level
                 )

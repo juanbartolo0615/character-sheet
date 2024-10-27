@@ -1,0 +1,89 @@
+{
+  "artisans_tools": [
+    {
+      "name": "Alchemist's Supplies",
+      "description": "A set of tools used to create potions, elixirs, and chemical concoctions. These include glass beakers, flasks, and a mortar and pestle.",
+      "use": "Craft potions, identify chemical substances, or create alchemical items such as acid or alchemist’s fire."
+    },
+    {
+      "name": "Brewer's Supplies",
+      "description": "Used to brew alcoholic drinks like beer, ale, or mead. It includes a mash tub, brewing equipment, and fermentation vessels.",
+      "use": "Craft beverages, detect poison in drinks, or gain favor with tavern owners and patrons through high-quality brews."
+    },
+    {
+      "name": "Calligrapher's Supplies",
+      "description": "A set of high-quality writing tools, including ink, quills, and parchment, used to create beautiful and precise writing.",
+      "use": "Craft scrolls, forge documents, or create attractive written works that impress nobles or scholars."
+    },
+    {
+      "name": "Carpenter's Tools",
+      "description": "Tools such as hammers, saws, nails, and chisels used to construct or repair wooden structures like buildings, ships, or furniture.",
+      "use": "Repair wooden objects, build structures, or identify structural weaknesses."
+    },
+    {
+      "name": "Cartographer's Tools",
+      "description": "This set includes maps, parchment, quills, and compasses used to create accurate maps and charts.",
+      "use": "Create maps, plot courses through unfamiliar terrain, or decipher old maps and charts."
+    },
+    {
+      "name": "Cobbler's Tools",
+      "description": "Tools for making and repairing shoes, including a knife, thread, and a small hammer.",
+      "use": "Craft or repair footwear, or identify the origin of boots or footprints."
+    },
+    {
+      "name": "Cook's Utensils",
+      "description": "A set of cooking tools, including pots, pans, knives, and spices.",
+      "use": "Prepare meals, gain favor by cooking delicious food, or identify poisoned or spoiled food."
+    },
+    {
+      "name": "Glassblower's Tools",
+      "description": "A collection of tools used to shape and craft glass, including a blowpipe, molds, and a small furnace.",
+      "use": "Craft glass objects like bottles or ornaments, or repair damaged glass items."
+    },
+    {
+      "name": "Jeweler's Tools",
+      "description": "Tools such as a jeweler's loupe, files, and pliers, used to create or repair jewelry and appraise gemstones.",
+      "use": "Craft or repair jewelry, identify or appraise gems and precious items, or detect fake jewelry."
+    },
+    {
+      "name": "Leatherworker's Tools",
+      "description": "A set of tools for crafting leather items, including needles, thread, and a small knife.",
+      "use": "Craft or repair leather armor, saddles, or other leather goods."
+    },
+    {
+      "name": "Mason's Tools",
+      "description": "Tools such as hammers, chisels, and trowels used to work with stone.",
+      "use": "Build or repair stone structures, identify weaknesses in stonework, or detect secret doors in stone walls."
+    },
+    {
+      "name": "Painter's Supplies",
+      "description": "A set of tools for painting, including brushes, pigments, and easels.",
+      "use": "Create paintings, forge artworks, or use art as a means of persuasion or storytelling."
+    },
+    {
+      "name": "Potter's Tools",
+      "description": "A collection of tools for shaping and baking clay, such as a potter’s wheel, clay, and a kiln.",
+      "use": "Craft or repair ceramic objects, such as bowls or vases."
+    },
+    {
+      "name": "Smith's Tools",
+      "description": "A set of tools used by blacksmiths, including hammers, tongs, and an anvil.",
+      "use": "Craft or repair metal items, including weapons, armor, and tools."
+    },
+    {
+      "name": "Tinker's Tools",
+      "description": "Tools for repairing or crafting small, intricate items, such as gears, clocks, and mechanical objects.",
+      "use": "Repair mechanical devices or craft small contraptions like traps or locks."
+    },
+    {
+      "name": "Weaver's Tools",
+      "description": "A set of tools including a loom and thread, used to create fabric and cloth objects.",
+      "use": "Craft or repair clothing, identify fabrics, or produce high-quality textiles for trade."
+    },
+    {
+      "name": "Woodcarver's Tools",
+      "description": "A set of knives and chisels used to carve wood into artistic or functional objects.",
+      "use": "Create sculptures, repair wooden items, or carve runes or messages into wood."
+    }
+  ]
+}

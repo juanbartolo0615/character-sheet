@@ -1,3 +1,4 @@
+"use client";
 import {
   Disclosure,
   DisclosureButton,
@@ -8,8 +9,20 @@ import {
   MenuItems,
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/navigation";
 
-export function NavLinks() {
+const NavLinks = () => {
+  const router = useRouter();
+
+  const redirectDash = () => {
+    router.push("/characters");
+  };
+
+  const logout = () => {
+    localStorage.removeItem("token");
+    router.push("/login");
+  };
+
   return (
     <nav>
       <Disclosure as="nav" className="bg-white shadow">
@@ -19,59 +32,46 @@ export function NavLinks() {
               <div className="flex flex-shrink-0 items-center">
                 <img
                   alt="Your Company"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                  src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
                   className="h-8 w-auto"
                 />
               </div>
               <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                 {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-                <a
-                  href="#"
+                <button
                   className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+                  onClick={redirectDash}
                 >
                   Dashboard
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                >
-                  Team
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                >
-                  Projects
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                >
-                  Calendar
-                </a>
+                </button>
               </div>
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:items-center">
-              <button
-                type="button"
-                className="relative rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              >
-                <span className="absolute -inset-1.5" />
-                <span className="sr-only">View notifications</span>
-                <BellIcon aria-hidden="true" className="h-6 w-6" />
-              </button>
-
               {/* Profile dropdown */}
               <Menu as="div" className="relative ml-3">
                 <div>
                   <MenuButton className="relative flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                     <span className="absolute -inset-1.5" />
                     <span className="sr-only">Open user menu</span>
-                    <img
-                      alt=""
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      className="h-8 w-8 rounded-full"
-                    />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      className="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.559.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.894.149c-.424.07-.764.383-.929.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.398.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.272-.806.108-1.204-.165-.397-.506-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.108-1.204l-.526-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894Z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                      />
+                    </svg>
                   </MenuButton>
                 </div>
                 <MenuItems
@@ -79,134 +79,21 @@ export function NavLinks() {
                   className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
                 >
                   <MenuItem>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
-                    >
-                      Your Profile
-                    </a>
-                  </MenuItem>
-                  <MenuItem>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
-                    >
-                      Settings
-                    </a>
-                  </MenuItem>
-                  <MenuItem>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
+                    <button
+                      className="px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 w-full inline-flex"
+                      onClick={logout}
                     >
                       Sign out
-                    </a>
+                    </button>
                   </MenuItem>
                 </MenuItems>
               </Menu>
             </div>
-            <div className="-mr-2 flex items-center sm:hidden">
-              {/* Mobile menu button */}
-              <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                <span className="absolute -inset-0.5" />
-                <span className="sr-only">Open main menu</span>
-                <Bars3Icon
-                  aria-hidden="true"
-                  className="block h-6 w-6 group-data-[open]:hidden"
-                />
-                <XMarkIcon
-                  aria-hidden="true"
-                  className="hidden h-6 w-6 group-data-[open]:block"
-                />
-              </DisclosureButton>
-            </div>
           </div>
         </div>
-
-        <DisclosurePanel className="sm:hidden">
-          <div className="space-y-1 pb-3 pt-2">
-            {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
-            <DisclosureButton
-              as="a"
-              href="#"
-              className="block border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700"
-            >
-              Dashboard
-            </DisclosureButton>
-            <DisclosureButton
-              as="a"
-              href="#"
-              className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-            >
-              Team
-            </DisclosureButton>
-            <DisclosureButton
-              as="a"
-              href="#"
-              className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-            >
-              Projects
-            </DisclosureButton>
-            <DisclosureButton
-              as="a"
-              href="#"
-              className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-            >
-              Calendar
-            </DisclosureButton>
-          </div>
-          <div className="border-t border-gray-200 pb-3 pt-4">
-            <div className="flex items-center px-4">
-              <div className="flex-shrink-0">
-                <img
-                  alt=""
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  className="h-10 w-10 rounded-full"
-                />
-              </div>
-              <div className="ml-3">
-                <div className="text-base font-medium text-gray-800">
-                  Tom Cook
-                </div>
-                <div className="text-sm font-medium text-gray-500">
-                  tom@example.com
-                </div>
-              </div>
-              <button
-                type="button"
-                className="relative ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              >
-                <span className="absolute -inset-1.5" />
-                <span className="sr-only">View notifications</span>
-                <BellIcon aria-hidden="true" className="h-6 w-6" />
-              </button>
-            </div>
-            <div className="mt-3 space-y-1">
-              <DisclosureButton
-                as="a"
-                href="#"
-                className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800"
-              >
-                Your Profile
-              </DisclosureButton>
-              <DisclosureButton
-                as="a"
-                href="#"
-                className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800"
-              >
-                Settings
-              </DisclosureButton>
-              <DisclosureButton
-                as="a"
-                href="#"
-                className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800"
-              >
-                Sign out
-              </DisclosureButton>
-            </div>
-          </div>
-        </DisclosurePanel>
       </Disclosure>
     </nav>
   );
-}
+};
+
+export default NavLinks;

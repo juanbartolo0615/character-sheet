@@ -27,6 +27,46 @@
     {
       "race": "Gnome",
       "subrace": "Rock Gnome"
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Black"
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Blue"
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Brass"
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Bronze"
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Copper"
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Gold"
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Green"
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Red"
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Silver"
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "White"
     }
   ]
 }

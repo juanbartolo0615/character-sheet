@@ -1,0 +1,108 @@
+{
+  "backgrounds": [
+    {
+      "name": "Acolyte",
+      "description": "You spent your early life in service to a temple or deity, acting as a caretaker, scholar, or disciple. Your faith shapes your worldview, and you have connections to religious communities that offer you aid.",
+      "feature": "Shelter of the Faithful",
+      "feature_description": "You can seek support, including shelter, healing, or assistance, from temples dedicated to your faith.",
+      "proficiencies": "Insight, Religion",
+      "languages": 2
+    },
+    {
+      "name": "Charlatan",
+      "description": "A master of deception, you’ve lived by trickery—faking identities, creating scams, or forging documents. You know how to manipulate others and use disguises to get what you want.",
+      "feature": "False Identity",
+      "feature_description": "You have a well-established fake identity, complete with documents and contacts.",
+      "proficiencies": "Deception, Sleight of Hand",
+      "languages": 0
+    },
+    {
+      "name": "Criminal",
+      "description": "Whether as a thief, smuggler, or spy, you’ve lived a life on the wrong side of the law. Your underworld connections help you stay informed, and you know how to move undetected.",
+      "feature": "Criminal Contact",
+      "feature_description": "You maintain a reliable contact in the criminal network who can provide information or help you evade capture.",
+      "proficiencies": "Deception, Stealth",
+      "languages": 0
+    },
+    {
+      "name": "Entertainer",
+      "description": "You’re a performer—be it a bard, acrobat, dancer, or musician—who thrives in the spotlight. Your ability to captivate audiences has earned you fame, admiration, and even favors.",
+      "feature": "By Popular Demand",
+      "feature_description": "You can always find work performing in inns, taverns, or noble courts.",
+      "proficiencies": "Acrobatics, Performance",
+      "languages": 0
+    },
+    {
+      "name": "Folk Hero",
+      "description": "You come from humble origins but accomplished a heroic deed that earned the admiration of your community. Now, people look up to you as a symbol of hope, even though you may not seek fame.",
+      "feature": "Rustic Hospitality",
+      "feature_description": "You can find shelter and aid among common folk who recognize your heroic deeds.",
+      "proficiencies": "Animal Handling, Survival",
+      "languages": 0
+    },
+    {
+      "name": "Guild Artisan",
+      "description": "You’re a skilled craftsman or merchant affiliated with a guild. Whether you make jewelry, pottery, or trade goods, your craft has connected you to a wide network of colleagues and customers.",
+      "feature": "Guild Membership",
+      "feature_description": "Your guild offers resources, legal support, and accommodations when traveling.",
+      "proficiencies": "Insight, Persuasion",
+      "languages": 1
+    },
+    {
+      "name": "Hermit",
+      "description": "After living in seclusion—perhaps in a monastery or isolated wilderness—you’ve discovered truths hidden from the rest of the world. Your time in isolation has given you wisdom and insight into life’s mysteries.",
+      "feature": "Discovery",
+      "feature_description": "You uncovered a significant secret, which could be a great revelation or a dangerous truth.",
+      "proficiencies": "Medicine, Religion",
+      "languages": 1
+    },
+    {
+      "name": "Noble",
+      "description": "You belong to a noble family, whether a wealthy landowner, a powerful aristocrat, or even royalty. You’ve been raised with privilege, and others treat you with respect—or envy—because of your status.",
+      "feature": "Position of Privilege",
+      "feature_description": "People of lower status defer to you, and noble families are more likely to welcome you into their social circles.",
+      "proficiencies": "History, Persuasion",
+      "languages": 1
+    },
+    {
+      "name": "Outlander",
+      "description": "You grew up in the wild, far from cities and society, and your survival skills reflect that life. Whether you were a hunter, tracker, nomad, or explorer, you are well-equipped to survive in the harshest environments.",
+      "feature": "Wanderer",
+      "feature_description": "You can find food and water in the wild for yourself and your party, provided the terrain offers resources.",
+      "proficiencies": "Athletics, Survival",
+      "languages": 1
+    },
+    {
+      "name": "Sage",
+      "description": "A scholar or researcher, you have dedicated your life to learning. Whether studying ancient texts or experimenting with magic, your thirst for knowledge has made you an expert in your field.",
+      "feature": "Researcher",
+      "feature_description": "You know where to find information and whom to ask when you need answers.",
+      "proficiencies": "Arcana, History",
+      "languages": 2
+    },
+    {
+      "name": "Sailor",
+      "description": "You spent years aboard a ship, learning the ropes of navigation and life at sea. Whether you were a loyal sailor or a rogue pirate, your seafaring skills are invaluable in both naval and adventuring situations.",
+      "feature": "Ship’s Passage",
+      "feature_description": "You can secure free passage on a ship for yourself and your companions.",
+      "proficiencies": "Athletics, Perception",
+      "languages": 0
+    },
+    {
+      "name": "Soldier",
+      "description": "You’ve served in an army or militia, gaining combat experience and learning how to lead others in battle. Even though you’ve left the battlefield, your military training stays with you.",
+      "feature": "Military Rank",
+      "feature_description": "You hold a rank from your service, which allows you to gain assistance from other soldiers and officers.",
+      "proficiencies": "Athletics, Intimidation",
+      "languages": 0
+    },
+    {
+      "name": "Urchin",
+      "description": "You grew up on the streets, fending for yourself by begging, stealing, or doing odd jobs. Your life of hardship has given you street smarts and an eye for danger, helping you survive in the roughest parts of any city.",
+      "feature": "City Secrets",
+      "feature_description": "You know the hidden routes through urban environments and can navigate cities with ease.",
+      "proficiencies": "Sleight of Hand, Stealth",
+      "languages": 0
+    }
+  ]
+}

@@ -31,6 +31,7 @@ class RaceOut(BaseModel):
     subraces: List[SubRacesOut] | None
 
 
+
 router = APIRouter(prefix="/races", tags=["races"])
 
 

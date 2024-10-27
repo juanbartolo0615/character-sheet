@@ -1,10 +1,11 @@
 from fastapi import FastAPI
-from routers import auth, races, character, classes
+from routers import auth, races, character, classes, subclasses, backgrounds
 import json
 from contextlib import asynccontextmanager
 from database import SessionLocal
 from sqlalchemy import select
-from model import Races, RacialTraits, Subraces, SubracesTraits, Classes, Subclass, ClassFeature, SubclassFeature
+from model import Races, RacialTraits, Subraces, SubracesTraits, Classes, Subclass, ClassFeature, SubclassFeature, Background, ArtisanTools
+from fastapi.middleware.cors import CORSMiddleware
 
 
 @asynccontextmanager
@@ -131,6 +132,38 @@ async def lifespan(app: FastAPI):
             f.close()
             conn.commit()
 
+        backgrounds = conn.execute(select(Background)).first()
+        if not backgrounds:
+            f = open("db_injection/background.json")
+            data = json.load(f)
+            for background in data["backgrounds"]:
+                create_background_request = Background(
+                    name=background["name"],
+                    description=background["description"],
+                    feature=background["feature"],
+                    feature_description=background["feature_description"],
+                    proficiencies=background["proficiencies"],
+                    languages=background["languages"]
+                )
+                conn.add(create_background_request)
+            f.close()
+            conn.commit()
+
+        artisan_tools = conn.execute(select(ArtisanTools)).first()
+        if not artisan_tools:
+            f = open("db_injection/artisan_tools.json")
+            data = json.load(f)
+            for artisan_tool in data["artisans_tools"]:
+                create_artisan_tool_request = ArtisanTools(
+                    name=artisan_tool["name"],
+                    description=artisan_tool["description"],
+                    use=artisan_tool["use"]
+                )
+                conn.add(create_artisan_tool_request)
+            f.close()
+            conn.commit()
+
+
     yield
     print("Restarting")
 
@@ -142,6 +175,15 @@ app.include_router(auth.router)
 app.include_router(races.router)
 app.include_router(character.router)
 app.include_router(classes.router)
+app.include_router(subclasses.router)
+app.include_router(backgrounds.router)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def read_root():

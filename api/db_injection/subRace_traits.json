@@ -53,6 +53,96 @@
         "Artificer’s Lore": "Double proficiency bonus on checks involving alchemist’s supplies or tinker’s tools.",
         "Tinker": "Can create tiny clockwork devices."
       }
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Black",
+      "traits": {
+        "Resistance": "Acid",
+        "Damage Type": "Acid",
+        "Breath Weapon": "5 by 30 ft. line (Dex save)"
+      }
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Blue",
+      "traits": {
+        "Resistance": "Lightning",
+        "Damage Type": "Lightning",
+        "Breath Weapon": "5 by 30 ft. line (Dex save)"
+      }
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Brass",
+      "traits": {
+        "Resistance": "Fire",
+        "Damage Type": "Fire",
+        "Breath Weapon": "5 by 30 ft. line (Dex save)"
+      }
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Bronze",
+      "traits": {
+        "Resistance": "Lightning",
+        "Damage Type": "Lightning",
+        "Breath Weapon": "5 by 30 ft. line (Dex save)"
+      }
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Copper",
+      "traits": {
+        "Resistance": "Acid",
+        "Damage Type": "Acid",
+        "Breath Weapon": "5 by 30 ft. line (Dex save)"
+      }
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Gold",
+      "traits": {
+        "Resistance": "Fire",
+        "Damage Type": "Fire",
+        "Breath Weapon": "15 ft. cone (Dex save)"
+      }
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Green",
+      "traits": {
+        "Resistance": "Poison",
+        "Damage Type": "Poison",
+        "Breath Weapon": "15 ft. cone (Con save)"
+      }
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Red",
+      "traits": {
+        "Resistance": "Fire",
+        "Damage Type": "Fire",
+        "Breath Weapon": "15 ft. cone (Dex save)"
+      }
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "Silver",
+      "traits": {
+        "Resistance": "Cold",
+        "Damage Type": "Cold",
+        "Breath Weapon": "15 ft. cone (Con save)"
+      }
+    },
+    {
+      "race": "Dragonborn",
+      "subrace": "White",
+      "traits": {
+        "Resistance": "Cold",
+        "Damage Type": "Cold",
+        "Breath Weapon": "15 ft. cone (Con save)"
+      }
     }
   ]
 }
