@@ -18,7 +18,7 @@ const classSkillSelections: ClassSkillSelection = {
   Bard: {
     skillCount: 3,
     skillsAvailable:
-      "Acrobatics, Animal Handling, Arcana, Athletics, Deception, History, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Religion, Sleight of Hand, Stealth",
+      "Acrobatics, Animal Handling, Arcana, Athletics, Deception, History, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Religion, Sleight of Hand, Stealth, Survival",
   },
   Cleric: {
     skillCount: 2,
@@ -81,6 +81,7 @@ const ProficiencyGrid = ({
   languages,
   races,
   selectedRaceId,
+  SetLanguages,
 }: {
   skills: Record<string, boolean>;
   setSkills: React.Dispatch<SetStateAction<Record<string, boolean>>>;
@@ -91,11 +92,77 @@ const ProficiencyGrid = ({
   languages: Languages;
   races: Races[];
   selectedRaceId: number;
+  SetLanguages: React.Dispatch<SetStateAction<Languages>>;
 }) => {
   const [limitSkills, setLimitSkills] = useState<number>(
     classSkillSelections[classes[selectedClassId - 1]["name"]]["skillCount"]
   );
+  const [skillCount, setSkillCount] = useState<number>(0);
+
+  const SkillsProficiency = () => {
+    if (selectedBackgroundId !== 0) {
+      const proficiencies =
+        backgrounds[selectedBackgroundId - 1]["proficiencies"].split(", ");
+      const resetSkills = Object.fromEntries(
+        Object.keys(skills).map((skill) => [skill, false])
+      );
+      setSkills(resetSkills);
+      for (const prof of proficiencies) {
+        setSkills((prevSkills) => ({
+          ...prevSkills,
+          [prof]: !prevSkills[prof],
+        }));
+      }
+    }
+  };
+
+  const SkillSelection = (skill: string) => {
+    if (
+      backgrounds[selectedBackgroundId - 1]["proficiencies"].includes(skill)
+    ) {
+      return true;
+    } else if (
+      classSkillSelections[classes[selectedClassId - 1]["name"]][
+        "skillsAvailable"
+      ].includes(skill) &&
+      skills[skill]
+    ) {
+      return false;
+    } else if (skillCount === limitSkills) {
+      return true;
+    } else if (
+      classSkillSelections[classes[selectedClassId - 1]["name"]][
+        "skillsAvailable"
+      ].includes(skill)
+    ) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
+  const SkillSelected = (skill: string) => {
+    if (
+      backgrounds[selectedBackgroundId - 1]["proficiencies"].includes(skill)
+    ) {
+      return true;
+    } else if (
+      classSkillSelections[classes[selectedClassId - 1]["name"]][
+        "skillsAvailable"
+      ].includes(skill)
+    ) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   const toggleSkill = (skill: string) => {
+    if (skills[skill]) {
+      setSkillCount(skillCount - 1);
+    } else {
+      setSkillCount(skillCount + 1);
+    }
     setSkills((prevSkills) => ({
       ...prevSkills,
       [skill]: !prevSkills[skill],
@@ -103,25 +170,43 @@ const ProficiencyGrid = ({
   };
 
   const toggleLang = (lange: string) => {
-    setSkills((prevLangs) => ({
+    SetLanguages((prevLangs) => ({
       ...prevLangs,
       [lange]: !prevLangs[lange],
     }));
   };
 
+  const CheckedLanguages = (lang: string) => {
+    if (racialLanguages[races[selectedRaceId - 1]["name"]].includes("any")) {
+      if (!racialLanguages[races[selectedRaceId - 1]["name"]].includes(lang)) {
+        return true;
+      }
+      return false;
+    } else {
+      return true;
+    }
+  };
+
+  useEffect(() => {
+    SkillsProficiency();
+  }, [selectedBackgroundId]);
+
   useEffect(() => {
     setLimitSkills(
       classSkillSelections[classes[selectedClassId - 1]["name"]]["skillCount"]
     );
-  }, [selectedBackgroundId]);
+    SkillsProficiency();
+  }, [selectedClassId]);
 
   return (
     <>
       <div className="w-full grid grid-cols-10 space-x-4">
         <div className="bg-white col-span-2 p-10 rounded-xl">
-          <h1 className="text-2xl pb-3">Skills:</h1>
+          <h1 className="text-2xl pb-3">
+            Skills: {skillCount}/{limitSkills}
+          </h1>
           <p className="pb-2">
-            Choose {limitSkills} skills to add your proficiency modifier.
+            Choose {limitSkills} skills to become proficient in.
           </p>
           <fieldset>
             <legend className="sr-only">Skills</legend>
@@ -129,10 +214,15 @@ const ProficiencyGrid = ({
               {Object.entries(skills).map(([skill, isActive]) => {
                 return (
                   <div
+                    // className={
+                    //   !classSkillSelections[
+                    //     classes[selectedClassId - 1]["name"]
+                    //   ]["skillsAvailable"].includes(skill)
+                    //     ? "relative flex items-start bg-slate-200"
+                    //     : "relative flex items-start"
+                    // }
                     className={
-                      !classSkillSelections[
-                        classes[selectedClassId - 1]["name"]
-                      ]["skillsAvailable"].includes(skill)
+                      SkillSelected(skill)
                         ? "relative flex items-start bg-slate-200"
                         : "relative flex items-start"
                     }
@@ -143,19 +233,20 @@ const ProficiencyGrid = ({
                         name={skill}
                         type="checkbox"
                         checked={isActive}
-                        disabled={
-                          !classSkillSelections[
-                            classes[selectedClassId - 1]["name"]
-                          ]["skillsAvailable"].includes(skill)
-                        }
+                        disabled={SkillSelection(skill)}
                         onChange={() => toggleSkill(skill)}
                         aria-describedby="comments-description"
+                        // className={
+                        //   !classSkillSelections[
+                        //     classes[selectedClassId - 1]["name"]
+                        //   ]["skillsAvailable"].includes(skill)
+                        //     ? "h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600 bg-slate-200"
+                        //     : "h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600 cursor-pointer"
+                        // }
                         className={
-                          !classSkillSelections[
-                            classes[selectedClassId - 1]["name"]
-                          ]["skillsAvailable"].includes(skill)
-                            ? "h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600 bg-slate-200"
-                            : "h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600 cursor-pointer"
+                          SkillSelected(skill)
+                            ? "h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600 bg-slate-200"
+                            : "h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600 cursor-pointer"
                         }
                       />
                     </div>
@@ -179,17 +270,18 @@ const ProficiencyGrid = ({
         </div>
         <div className="bg-white col-span-2 p-10 rounded-xl">
           <h1 className="text-2xl pb-3">Languages:</h1>
-          <p className="pb-2">
-            Choose {limitSkills} skills to add your proficiency modifier.
-          </p>
+          <p className="pb-2">Choose {limitSkills} languages to learn.</p>
           <fieldset>
             <legend className="sr-only">Skills</legend>
             <div className="space-y-5">
               {Object.entries(languages).map(([lang, isActive]) => {
+                if (lang === "any") {
+                  return null;
+                }
                 return (
                   <div
                     className={
-                      racialLanguages[
+                      !racialLanguages[
                         races[selectedRaceId - 1]["name"]
                       ].includes("any")
                         ? "relative flex items-start bg-slate-200"
@@ -202,13 +294,11 @@ const ProficiencyGrid = ({
                         name={lang}
                         type="checkbox"
                         checked={isActive}
-                        disabled={racialLanguages[
-                          races[selectedRaceId - 1]["name"]
-                        ].includes("any")}
+                        disabled={CheckedLanguages(lang)}
                         onChange={() => toggleLang(lang)}
                         aria-describedby="comments-description"
                         className={
-                          racialLanguages[
+                          !racialLanguages[
                             races[selectedRaceId - 1]["name"]
                           ].includes("any")
                             ? "h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600 bg-slate-200"

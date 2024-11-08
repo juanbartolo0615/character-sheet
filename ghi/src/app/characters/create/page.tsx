@@ -38,20 +38,21 @@ export interface Languages {
 
 const dndLanguages: Languages = {
   Common: false,
-  Elvish: false,
   Dwarvish: false,
+  Elvish: false,
   Giant: false,
+  Gnomish: false,
   Goblin: false,
   Halfling: false,
-  Draconic: false,
-  Infernal: false,
+  Orc: false,
   Abyssal: false,
   Celestial: false,
-  Sylvan: false,
-  Primordial: false,
   DeepSpeech: false,
+  Draconic: false,
+  Infernal: false,
+  Primordial: false,
+  Sylvan: false,
   Undercommon: false,
-  ThievesCant: false,
   any: false,
 };
 
@@ -283,6 +284,9 @@ const Page = () => {
           classes={classes}
           selectedClassId={selectedClassId}
           languages={languages}
+          races={races}
+          selectedRaceId={selectedRaceId}
+          SetLanguages={SetLanguages}
         />
       ) : null}
       {/* // <img src="/Wizard.svg" className="h-14 w-16"></img>; */}

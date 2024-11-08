@@ -88,6 +88,14 @@ class Character(Base):
     level: Mapped[int]
     name: Mapped[str]
     background: Mapped[int] = mapped_column(ForeignKey("background.id"))
+    strength: Mapped[int]
+    dexterity: Mapped[int]
+    constitution: Mapped[int]
+    intelligence: Mapped[int]
+    wisdom: Mapped[int]
+    charisma: Mapped[int]
+    hitpoints: Mapped[int]
+    feet: Mapped[int]
 
 
 class SavingThrowsProficiencies(Base):

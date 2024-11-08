@@ -43,26 +43,26 @@ const BackgroundGrid = ({
     setDisplayBackgrounds(false);
     setDisplayClasses(true);
   };
-  const SkillsProficiency = () => {
-    if (selectedBackgroundId !== 0) {
-      const proficiencies =
-        backgrounds[selectedBackgroundId - 1]["proficiencies"].split(", ");
-      const resetSkills = Object.fromEntries(
-        Object.keys(skills).map((skill) => [skill, false])
-      );
-      setSkills(resetSkills);
-      for (const prof of proficiencies) {
-        setSkills((prevSkills) => ({
-          ...prevSkills,
-          [prof]: !prevSkills[prof],
-        }));
-      }
-    }
-  };
+  // const SkillsProficiency = () => {
+  //   if (selectedBackgroundId !== 0) {
+  //     const proficiencies =
+  //       backgrounds[selectedBackgroundId - 1]["proficiencies"].split(", ");
+  //     const resetSkills = Object.fromEntries(
+  //       Object.keys(skills).map((skill) => [skill, false])
+  //     );
+  //     setSkills(resetSkills);
+  //     for (const prof of proficiencies) {
+  //       setSkills((prevSkills) => ({
+  //         ...prevSkills,
+  //         [prof]: !prevSkills[prof],
+  //       }));
+  //     }
+  //   }
+  // };
 
-  useEffect(() => {
-    SkillsProficiency();
-  }, [selectedBackgroundId]);
+  // useEffect(() => {
+  //   SkillsProficiency();
+  // }, [selectedBackgroundId]);
   return (
     <>
       <div className="w-full flex justify-between pb-3">
